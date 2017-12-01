@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阿里天气</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+	<script src="js/echarts.min.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<style>
+		@media only screen and (max-width: 1260px) {
+		    .nowDay{
+		        width: 1260px;
+		    }
+		}
+
+	</style>
+</head>
+<body>
+	<div id="content">
+	<div class="nowDay">
+		<div class="title">
+			<div class="container">
+				<i id="logo">
+					<i class="inner"></i>
+				</i>
+				<div class="slider">
+					<p class="sliderCity"></p>	
+					<!-- <p class="sliderTime"></p> -->
+				</div>
+				<div class="upDate"></div>
+			</div>
+		</div>
+		<!-- 当天天气 -->
+		<div class="getWeather">
+			<div class="nowWeather">
+				<p class="nowPic pic"></p>
+				<div class="wc-aqi">
+					<i class="iconfont icon-kongqizhiliangcha" title="空气质量"></i>
+					<p id="txt-val"></p>
+					<p id="txt-desc"></p>
+				</div>
+				<div class="nowDetail">
+					<div class="main">
+						<p class="nowDegree"></p>
+						<span class="temp"></span>
+					</div>
+					<div class="other">
+						<sapn class="item wind"></span>
+						
+						<span class="item humidity"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- 逐时天气 -->
+		<div class="navWeather">
+			<a href="http://www.weather.com.cn" class="txtSource" target="_blank">数据来源于阿里天气API</a>
+			<h2 class="boxTitle">逐小时预报</h2>
+			<a href="#" class="btnPrev iconfont icon-prev"></a>
+			<a href="#" class="btnNext iconfont icon-3"></a>
+			<!-- 显示区域 -->
+			<div class="boxContent">
+				<div id="box-weather">
+					<ol id="ls-weather-hour" class="lsWeather"></ol>
+					<div id="chart-hours">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 7日天气 -->
+		<div class="weekContainer">
+			<div class="box" id="wc-7days">
+				<h2 class="boxTitle">7日天气预报</h2>
+				<!-- 显示区域 -->
+				<div id="wc-weather" class="boxContent">
+					<ol id="ls-weather-day" class="lsWeatherDay">
+					</ol>
+					<div id="chartDays"></div>
+				</div>
+			</div>
+
+			<!-- 生活指数 -->
+			<div class="livingIndex">
+				<h2 class="boxTitle">生活指数</h2>
+				<div class="boxContent2" id="wc-pages">
+					<div id="wc-content">
+						<ul id="ls-living" class="pages">
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="copy">Copyright © 2017. All rights reserved. Powered by sai233</div>
+	</div>
+	</div>
+
+	<script src="js/getWeather.js"></script>
+	<script src="js/chart.js"></script>
+</body>
+</html>
