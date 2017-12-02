@@ -7,6 +7,7 @@ body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, t
 	margin: 0;
 }
 body{
+	/*width: 100%;*/
 	background-color: #f6f6f6;
 }
 a{
@@ -14,10 +15,6 @@ a{
 }
 ol,ul{
 	list-style: none;
-}
-#content{
-	width: 100%;
-	background-color: #F6F6F6;
 }
 .nowDay{
 	width: 100%;
