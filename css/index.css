@@ -82,7 +82,7 @@ ol,ul{
 }
 .nowWeather{
 	position: relative;
-	width: 80%;
+	width: 1240px;
 	margin: 0 auto;
 }
 .nowWeather .nowPic{
@@ -164,6 +164,7 @@ ol,ul{
 	right: -9px;
 }
 .navWeather .btnPrev,.navWeather .btnNext{
+	cursor: pointer;
 	top: 153px;
 	position: absolute;
 	z-index:2;
@@ -335,6 +336,7 @@ ol,ul{
 	border-bottom: 1px solid #e6e6e6;
 	border-right: 1px solid #e6e6e6;
 	overflow: hidden; 
+	position: relative;
 }
 #ls-living .ct-sub{
 	height: 103px;
@@ -351,13 +353,20 @@ ol,ul{
 	line-height: 22px;
 }
 #ls-living .ct-detail{
+	display: none;
+	text-align: center;
+	vertical-align: middle;
 	height: 133px;
 	width: 162px;
 	padding: 0 18px;
-	display: table;
+	/* display: table; */
 	overflow: hidden;
+	position: absolute;
+	top: 0;
+	/* z-index: -1; */
 }
 .ct-detail .detail {
+	cursor: default;
 	vertical-align: middle;
 	text-align: left;
 	display: table-cell;
@@ -368,6 +377,10 @@ ol,ul{
 	text-overflow: ellipsis;
 	-webkit-line-clamp:5;
 	-webkit-box-orient:vertical;
+	padding: 25px 0;
+}
+.item:first-child .ct-detail .detail{
+	padding: 45px 0;
 }
 .icon-kongtiao{
 	color:#FF6A6A;

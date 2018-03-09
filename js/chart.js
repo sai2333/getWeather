@@ -19,10 +19,14 @@ $(function(){
 		}
 	});
 	//生活指数事件
-	$('#ls-living').on('mouseover','.ct-sub',function(){
-			$(this).stop().animate({'margin-top':'-133px'},500);
+	$('#ls-living').on('mouseover','.item',function(){
+			$(this).find('.ct-sub').css('display','none');
+			$(this).find('.ct-detail').css('display','block');
 	});
-	$('#ls-living').on('mouseout','.ct-sub',function(){
-			$(this).stop().animate({'margin-top':'0px'},500);	
+	$('#ls-living').on('mouseout','.item',function(){
+			$(this).find('.ct-sub').css('display', 'block');
+			$(this).find('.ct-detail').css('display', 'none');
 	});
+
+	
 })
